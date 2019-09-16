@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BasicInstruction</string>
+    <string name="toolbar_title_textsize">19sp</string>
+    <string name="toolbar_subtitle_textsize">13sp</string>
+</resources>

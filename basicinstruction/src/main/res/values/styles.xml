@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- toolbar菜单样式 -->
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!--在theme里面设置菜单文字为白色-->
+        <item name="actionMenuTextColor">@android:color/black</item>
+        <!-- toolbar菜单样式 -->
+        <item name="android:popupTheme">@style/ToolbarPopupTheme</item>
+        <item name="actionMenuTextAppearance">@style/ToolbarPopupTheme</item>
+        <item name="android:titleTextAppearance">@style/ToolbarTitle</item>
+        <!--<item name="selectableItemBackground">@drawable/toolbar_button_selector</item>-->
+    </style>
+
+        <!-- toolbar弹出菜单样式 -->
+        <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat">
+            <!--背景色-->
+            <item name="android:colorBackground">#212121</item>
+        </style>
+        <!--给toolbar加上titleTextAppearance属性：app:titleTextAppearance="@style/ToolbarTitle"-->
+        <!-- toolbar标题样式 -->
+        <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+            <!--标题字体大小-->
+            <item name="android:textSize">@string/toolbar_subtitle_textsize</item>
+        </style>
+        <style name="toolbarLable">
+            <item name="android:layout_height">wrap_content</item>
+            <item name="android:layout_width">wrap_content</item>
+            <item name="android:layout_gravity">center</item>
+            <item name="android:singleLine">true</item>
+            <item name="android:textColor">#333</item>
+            <item name="android:textSize">17sp</item>
+        </style>
+        <style name="NavigationStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
+            <item name="android:minWidth">0dp</item>
+            <item name="android:paddingLeft">0dp</item>
+            <item name="android:scaleType">centerInside</item>
+        </style>
+
+</resources>
