@@ -79,7 +79,6 @@ public class MyThreadPool {
 
   class MyThead extends Thread{
     private Runnable task;
-
     public MyThead(Runnable runnable) {
       this.task = runnable;
     }
