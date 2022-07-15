@@ -1,1 +1,7 @@
-include ':app', ':basicinstruction', ':recyclerviewpro', ':scrollpicker', ':threadpooltest'
+include ':app', ':basicinstruction', ':recyclerviewpro', ':scrollpicker', ':threadpooltest', ':rxretrofit', ':verifyeventdispatch', ':testim', ':breadknife'
+include ':sort'
+include ':processor'
+include ':nativeinterface'
+include ':customcamera'
+include ':crypt'
+include ':fileoperate'
