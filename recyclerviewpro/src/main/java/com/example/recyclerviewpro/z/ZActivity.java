@@ -1,14 +1,16 @@
 package com.example.recyclerviewpro.z;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.recyclerviewpro.R;
 import com.example.recyclerviewpro.z.dataentity.Entity;
 import com.example.recyclerviewpro.z.dataentity.Type2entityAdapter;
 import com.example.recyclerviewpro.z.tools.ItemToEntity;
+
 import java.util.ArrayList;
 
 public class ZActivity extends AppCompatActivity {

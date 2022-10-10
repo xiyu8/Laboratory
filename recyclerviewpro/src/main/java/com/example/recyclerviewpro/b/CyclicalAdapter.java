@@ -1,8 +1,10 @@
 package com.example.recyclerviewpro.b;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+
 import android.view.ViewGroup;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.recyclerviewpro.DataPrototype;
 

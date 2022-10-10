@@ -12,8 +12,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Class clazz;
 
-        getClass().getAnnotation();
-        getClass().getField();
-        getClass().getMethod();
+//        getClass().getAnnotation();
+//        getClass().getField();
+//        getClass().getMethod();
     }
 }

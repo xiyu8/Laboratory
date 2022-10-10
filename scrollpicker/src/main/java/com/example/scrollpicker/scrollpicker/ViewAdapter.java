@@ -1,11 +1,9 @@
 package com.example.scrollpicker.scrollpicker;
 
 import android.app.Activity;
-import android.support.annotation.Nullable;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
@@ -13,13 +11,11 @@ import com.example.scrollpicker.R;
 
 import java.util.List;
 
-import static android.view.View.generateViewId;
-
 public class ViewAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
   Activity context;
   int itemHeight;
 
-  public ViewAdapter(@Nullable List<String> data,Activity context,int resId,int itemHeight) {
+  public ViewAdapter(@Nullable List<String> data, Activity context, int resId, int itemHeight) {
     super(resId,data);
     this.context = context;
     this.itemHeight = itemHeight;

@@ -30,10 +30,6 @@ public final class LogTackle {
     private static final String TAG = "OPENIM";
 
     private static int logLevel = 3;
-    public static final int TSDK_ERROR_LOG_LEVEL = 0;
-    public static final int TSDK_WARN_LOG_LEVEL = 1;
-    public static final int TSDK_INFO_LOG_LEVEL = 2;
-    public static final int TSDK_DEBUG_LOG_LEVEL = 3;
 
     private static final ExecutorService EXECUTOR_SERVICE = Executors.newSingleThreadExecutor(new LogThreadFactory("log"));
     private static final int LOG_FILE_SIZE = 5242880;
@@ -126,7 +122,7 @@ public final class LogTackle {
                     return;
                 }
 
-                String nowTimeStr = String.format("[%s-08:00]", (new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS", Locale.US)).format(new Date())) + logText + System.lineSeparator();
+                String nowTimeStr = String.format("[%s]", (new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS", Locale.US)).format(new Date()));
                 String toLogStr = nowTimeStr + " " + logText;
                 toLogStr += "\r\n";
 

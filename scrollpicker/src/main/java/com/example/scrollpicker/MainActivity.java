@@ -1,8 +1,9 @@
 package com.example.scrollpicker;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.FrameLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.scrollpicker.scrollpicker.FloorLayout;
 import com.example.scrollpicker.scrollpicker.FloorOptionCallBack;
