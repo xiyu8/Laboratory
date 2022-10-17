@@ -202,27 +202,36 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         int  de = ttt(aaa, start, end);
-        ttt(aaa, start, de-1);
-        ttt(aaa, de+1, end);
+        tttI(aaa, start, de-1);
+        tttI(aaa, de+1, end);
     }
     public int ttt(int[]  aaa,int start,int end) {
 
         int standard = aaa[end];
 
-        while (standard < end) {
+        while (start < end) {
             if (aaa[start] <= standard) {
-                while (aaa[start] <= standard) {
+                while (aaa[start] <= standard && start < end) {
                     start++;
                 }
+            }
+            if (start >= end) {
+                break;
             }
             int temp = aaa[start];
             aaa[start] = aaa[end];
             aaa[end] = temp;
             end--;
+            if (start >= end) {
+                break;
+            }
             if (aaa[end] > standard) {
-                while (aaa[end] > standard) {
+                while (aaa[end] > standard && start < end) {
                     end--;
                 }
+            }
+            if (start >= end) {
+                break;
             }
             int temp1 = aaa[start];
             aaa[start] = aaa[end];
