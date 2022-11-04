@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        int[] a = new int[]{3,7,2,9,1,4,6,8,10,5};
+        Integer[] a = new Integer[]{3,7,2,9,1,4,6,8,10,5};
         int[] b = new int[]{1,2,3,4,5,6,7,8,9,10};
         int[] c = new int[]{10,9,8,7,6,5,4,3,2,1};
         int[] d = new int[]{1,10,2,9,3,2,4,7,5,6};
@@ -82,26 +83,6 @@ public class MainActivity extends AppCompatActivity {
         }
         //这里返回start或者end皆可，此时的start和end都为基准值所在的位置
         return end;
-    }
-
-    public void sortImp(ArrayList<Integer> target) {
-//        int base = target.get(0);
-//        int start = 1;
-//        int end = target.size() - 1;
-//
-//
-//        while (start < end) {
-//            if (base < target.get(1)) {
-//                int swap = base;
-//                base = target.get(1);
-//                target.set(1, swap);
-//                start++;
-//            } else {
-//                start++;
-//            }
-//        }
-
-
     }
 
     public int sortImp(int[] target, int start, int end) {
@@ -197,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void tttI(int[]  aaa,int start,int end) {
+    public void tttI(Integer[]  aaa,int start,int end) {
         if (start >= end) {
             return;
         }
@@ -205,33 +186,39 @@ public class MainActivity extends AppCompatActivity {
         tttI(aaa, start, de-1);
         tttI(aaa, de+1, end);
     }
-    public int ttt(int[]  aaa,int start,int end) {
+    public int ttt(Integer[]  aaa,int start,int end) {
 
         int standard = aaa[end];
 
         while (start < end) {
             if (aaa[start] <= standard) {
-                while (aaa[start] <= standard && start < end) {
+                while (aaa[start] <= standard) {
                     start++;
+                    if (start >= end) {
+                        return start;
+                    }
                 }
             }
             if (start >= end) {
-                break;
+                return start;
             }
             int temp = aaa[start];
             aaa[start] = aaa[end];
             aaa[end] = temp;
             end--;
             if (start >= end) {
-                break;
+                return start;
             }
             if (aaa[end] > standard) {
-                while (aaa[end] > standard && start < end) {
+                while (aaa[end] > standard) {
                     end--;
+                    if (start >= end) {
+                        return start;
+                    }
                 }
             }
             if (start >= end) {
-                break;
+                return start;
             }
             int temp1 = aaa[start];
             aaa[start] = aaa[end];

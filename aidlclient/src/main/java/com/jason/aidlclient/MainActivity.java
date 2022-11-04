@@ -10,9 +10,14 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
+import android.os.UserHandle;
 import android.util.Log;
+import android.view.ViewGroup;
 
 import com.jason.aidlserver.IMyAidlInterface;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -43,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         boolean bRet = getApplicationContext().bindService(intent, connection, Service.BIND_AUTO_CREATE);
         Log.e("IRemote", "IRemoteService Service.BIND_AUTO_CREATE return: " + bRet);
 
+        HashMap;
+        LinkedHashMap
 
     }
 
@@ -54,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             binder = IMyAidlInterface.Stub.asInterface(service);
             try {
                 binder.testAidl(11, 22);
+//                binder.test2(new User());
             } catch (RemoteException e) {
                 e.printStackTrace();
             }

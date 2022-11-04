@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         intent.setClassName(aidlPkg, aidlClsName);
         boolean bRet = getApplicationContext().bindService(intent, connection, Service.BIND_AUTO_CREATE);
         Log.e("IRemote", "IRemoteService Service.BIND_AUTO_CREATE return: " + bRet);
-
+        View
     }
 
 
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
             binder = IMyAidlInterface.Stub.asInterface(service);
             try {
                 binder.testAidl(11, 22);
+                User user = new User();
+                user.setName("32323");
+                binder.test2(user);
             } catch (RemoteException e) {
                 e.printStackTrace();
             }

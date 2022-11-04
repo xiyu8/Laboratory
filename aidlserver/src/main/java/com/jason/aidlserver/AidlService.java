@@ -18,6 +18,16 @@ public class AidlService extends Service {
         public int testAidl(int value1, int value2) throws RemoteException {
             return testAidlImp(value1, value2);
         }
+
+        @Override
+        public int test2(User user) throws RemoteException {
+            return 0;
+        }
+//        @Override
+//        public boolean test2(User user){
+//            return false;
+//        }
+
     };
 
     public int testAidlImp(int value1, int value2){

@@ -34,6 +34,7 @@ public class AESUtilsV2 {
 
     private static KeyStore keyStore;
     private static final String TRANSFORMATION_MODE = "AES/GCM/NoPadding";
+    private static final String TRANSFORMATION_MODE_CBC = "AES/CBC/PKCS5PADDING";
     private static final String ANDROID_KEY_STORE = "AndroidKeyStore";
     //    private static final String ALIAS = "AndroidKeyStore";
     private static final String ENCODE = "UTF-8";
@@ -151,7 +152,7 @@ public class AESUtilsV2 {
     private static SecretKey generateKey(final String alias) {
         try {
             KeyGenerator keyGenerator = KeyGenerator
-                    .getInstance(KeyProperties.KEY_ALGORITHM_AES, "AndroidKeyStore");
+                    .getInstance(KeyProperties.KEY_ALGORITHM_AES, ANDROID_KEY_STORE);
             keyGenerator.init(new KeyGenParameterSpec.Builder(alias,
                     KeyProperties.PURPOSE_ENCRYPT | KeyProperties.PURPOSE_DECRYPT)
                     .setBlockModes(KeyProperties.BLOCK_MODE_GCM)

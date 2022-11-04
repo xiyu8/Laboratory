@@ -8,6 +8,8 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
+import android.os.Message;
 import android.os.PersistableBundle;
 import android.os.RemoteException;
 import android.util.Log;
@@ -23,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
+      Looper.prepare();
+      Handler handler =new Handler();
+      Message message = Message.obtain();
+      message.setCallback();
+      handler.sendMessage();
+      handler.post();
+      handler.postDelayed();
+      Looper.loop();
 
   }
 
