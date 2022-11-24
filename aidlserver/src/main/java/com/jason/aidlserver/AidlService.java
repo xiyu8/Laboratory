@@ -21,7 +21,7 @@ public class AidlService extends Service {
 
         @Override
         public int test2(User user) throws RemoteException {
-            return 0;
+            return Integer.parseInt(user.getName())+2;
         }
 //        @Override
 //        public boolean test2(User user){

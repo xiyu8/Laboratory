@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         intent.setClassName(aidlPkg, aidlClsName);
         boolean bRet = getApplicationContext().bindService(intent, connection, Service.BIND_AUTO_CREATE);
         Log.e("IRemote", "IRemoteService Service.BIND_AUTO_CREATE return: " + bRet);
-        View
     }
 
 

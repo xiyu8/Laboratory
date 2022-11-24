@@ -18,6 +18,9 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.ReentrantLock;
+
 public class MainActivity extends AppCompatActivity {
 
   @Override
@@ -25,14 +28,21 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-      Looper.prepare();
-      Handler handler =new Handler();
-      Message message = Message.obtain();
-      message.setCallback();
-      handler.sendMessage();
-      handler.post();
-      handler.postDelayed();
-      Looper.loop();
+//      Looper.prepare();
+//      Handler handler =new Handler();
+//      Message message = Message.obtain();
+//      message.setCallback();
+//      handler.sendMessage();
+//      handler.post();
+//      handler.postDelayed();
+//      Looper.loop();
+//
+//      handler.post();
+//
+//      AtomicInteger atomicInteger;
+//      atomicInteger.incrementAndGet();
+//
+//      ReentrantLock
 
   }
 
