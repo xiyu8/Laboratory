@@ -31,7 +31,47 @@ public class MainActivity extends AppCompatActivity {
            Log.e("sort",x+" ");
         }
 
+        int sum = sumImp(b,10);
+        Log.e("sum",sum+" ");
+
     }
+    //求数组的和（非尾递归）
+    private int sumImp(int a[], int i) {
+        if (i == 1) {
+            return a[0];
+        } else{
+            int temp = sumImp(a, i - 1);
+            int ret = temp + a[i - 1];
+            return ret;
+        }
+    }
+
+    private int sumImp1(int a[], int i) {
+        if (i == 1) {
+            return a[0];
+        } else{
+            int tt=a[i] + a[i + 1];
+            int temp = sumImp(a, i - 1);
+            int ret = temp + a[i - 1];
+            return ret;
+        }
+    }
+
+
+    //求数组的和（尾递归）,入口
+    private long sum(int array[], int length) {
+        return sumImp(array, 0, length);
+    }
+    //求数组的和（尾递归）,实际函数
+    private long sumImp(int array[], long result, int index) {
+        if (index > 0) {
+            result += array[index - 1];
+            return sumImp(array, result, index - 1);
+        }
+        return result;
+    }
+
+
 
 
     public void sort(int[] a, int start, int end){
