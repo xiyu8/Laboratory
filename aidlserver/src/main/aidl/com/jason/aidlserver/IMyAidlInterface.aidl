@@ -12,8 +12,8 @@ interface IMyAidlInterface {
 //    void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat,
 //            double aDouble, String aString);
 
-    int testAidl(int value1, int value2);
+    String testAidl(int value1, int value2);
 
-    int test2(in User user);
+    String test2(in User user);
 
 }

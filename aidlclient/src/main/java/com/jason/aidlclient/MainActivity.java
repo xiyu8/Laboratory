@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 User user = new User();
                 user.setName("1111");
                 user.setId(22);
-                int tt = binder.test2(user);
+                String tt = binder.test2(user);
                 Log.e("IRemote", "int tt = binder.test2(new User()): " + tt);
             } catch (RemoteException e) {
                 e.printStackTrace();

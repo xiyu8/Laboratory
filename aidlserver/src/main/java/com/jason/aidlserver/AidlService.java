@@ -15,13 +15,13 @@ public class AidlService extends Service {
     }
     private IBinder binder = new IMyAidlInterface.Stub(){
         @Override
-        public int testAidl(int value1, int value2) throws RemoteException {
+        public String testAidl(int value1, int value2) throws RemoteException {
             return testAidlImp(value1, value2);
         }
 
         @Override
-        public int test2(User user) throws RemoteException {
-            return Integer.parseInt(user.getName())+2;
+        public String test2(User user) throws RemoteException {
+            return test2Imp(user);
         }
 //        @Override
 //        public boolean test2(User user){
@@ -30,8 +30,12 @@ public class AidlService extends Service {
 
     };
 
-    public int testAidlImp(int value1, int value2){
-        return 33;
+    public String testAidlImp(int value1, int value2){
+        return 33+":"+(value1+value2);
+    }
+
+    public String test2Imp(User user){
+        return "test2Imp"+":"+(user.getName());
     }
 
     @Nullable
