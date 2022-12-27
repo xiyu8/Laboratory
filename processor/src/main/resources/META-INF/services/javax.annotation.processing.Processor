@@ -1,2 +1,1 @@
-com.jason.knife.annotation.MyProcessor
-#com.google.auto.service.processor.AutoServiceProcessor
+com.jason.processor.MyProcessor

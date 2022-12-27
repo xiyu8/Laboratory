@@ -64,7 +64,7 @@ public class AESUtils {
     }
 
 
-    public static String newEncrypt(String ss,@Deprecated String key) {
+    public static String newEncrypt(String ss, String key) {
         if(keyStore==null) init();
         String temp = tryToGet(ss);
         if(temp!=null) return temp;
@@ -100,7 +100,7 @@ public class AESUtils {
         return null;
     }
 
-    public static String newDecrypt(String target, @Deprecated String key) {
+    public static String newDecrypt(String target, String key) {
         if(keyStore==null) init();
         Cipher cipher = null;
         String ALIAS = target.substring(0, ALIAS_SIZE);
