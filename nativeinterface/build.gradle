@@ -19,6 +19,15 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        externalNativeBuild {
+            ndkBuild {
+                path 'src/main/jni/Android.mk'
+            }
+        }
+        sourceSets.main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -26,13 +35,13 @@ android {
     }
 
 
-    sourceSets {
-        main {
-            assets.srcDirs = ['src/main/assets']
-            jniLibs.srcDirs = ['libs']
-
-        }
-    }
+//    sourceSets {
+//        main {
+//            assets.srcDirs = ['src/main/assets']
+//            jniLibs.srcDirs = ['libs']
+//
+//        }
+//    }
 }
 
 dependencies {
