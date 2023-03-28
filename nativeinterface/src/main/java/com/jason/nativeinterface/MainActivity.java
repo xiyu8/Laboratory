@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
          */
 
         String ss = CryptTool.getCryptIv("cc");
-        Log.e("CryptTool", "CryptTool.getCryptKey()" + ss);
-//        String ss = NDKTools.getStringFromNDK();
-//        Log.e("NDKTools", "NDKTools.getStringFromNDK()" + ss);
+        Log.e("CryptTool", "CryptTool.getCryptIv()" + ss);
+//        String ss1 = CryptTool.getCryptKey();
+//        Log.e("CryptTool", "CryptTool.getCryptKey()" + ss1);
 
 
 //        getClass().getAnnotation();
