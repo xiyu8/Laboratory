@@ -59,7 +59,7 @@ public class MainActivity1_ extends AppCompatActivity implements NioPeriodChroni
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_1);
         gson = new Gson();
 //        ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CAMERA},
 //                111);

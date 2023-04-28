@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/LocalSurfaceView"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/RemoteSurfaceView"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/RemoteSurfaceView2"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/peer_init"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="初始化A"
+        android:onClick="onClick"
+        app:layout_constraintTop_toBottomOf="@id/LocalSurfaceView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/offer_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提供视频流"
+        android:onClick="onClick"
+        app:layout_constraintLeft_toLeftOf="@id/peer_init"
+        app:layout_constraintTop_toBottomOf="@id/peer_init"
+        />
+
+    <Button
+        android:id="@+id/peer_init_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="初始化B"
+        android:onClick="onClick"
+        app:layout_constraintTop_toBottomOf="@id/RemoteSurfaceView"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/answer_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="接收视频流"
+        android:onClick="onClick"
+        app:layout_constraintRight_toRightOf="@id/peer_init_b"
+        app:layout_constraintTop_toBottomOf="@id/peer_init_b"
+        />
+
+
+    <Button
+        android:id="@+id/im_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="信令长连接调试"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
