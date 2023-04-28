@@ -17,8 +17,8 @@
 
     <org.webrtc.SurfaceViewRenderer
         android:id="@+id/LocalSurfaceView"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
+        android:layout_width="180dp"
+        android:layout_height="270dp"
         android:layout_gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,8 +26,8 @@
 
     <org.webrtc.SurfaceViewRenderer
         android:id="@+id/RemoteSurfaceView"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
+        android:layout_width="180dp"
+        android:layout_height="270dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         />
