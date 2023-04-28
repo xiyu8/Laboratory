@@ -181,6 +181,7 @@ public final class LogTackle {
     }
 
     private static final class LogThreadFactory extends AtomicLong implements ThreadFactory {
+        private static final long serialVersionUID = 1927816293512124184L;
         private static final AtomicInteger POOL_NUMBER = new AtomicInteger(1);
         private final ThreadGroup group;
         private final String namePrefix;

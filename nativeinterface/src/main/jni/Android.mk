@@ -4,5 +4,5 @@ include $(CLEAR_VARS)
 LOCAL_MODULE:=crypt_tool
 # target c file
 LOCAL_SRC_FILES:=crypt_tool.c
-#
+#shared so lib
 include $(BUILD_SHARED_LIBRARY)
